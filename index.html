@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beleza & Estilo - Salão de Beleza</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff8f5;
+      color: #4a4a4a;
+    }
+
+    /* Header */
+    header {
+      background-color: #f1c0b9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+    }
+    header .navbar-brand {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #5a2a27;
+    }
+    header .navbar-nav a {
+      color: #5a2a27;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    header .navbar-nav a:hover {
+      color: #bd7269;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('/salao.jpg') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    .hero .container {
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      background-color: #bd7269;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #a45d53;
+    }
+
+    /* Serviços */
+    #servicos {
+      padding: 4rem 0;
+      background-color: #fff3f0;
+      text-align: center;
+    }
+    #servicos h2 {
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: #5a2a27;
+    }
+
+.card-servico img {
+  width: 380px;       /* largura fixa */
+  height: 280px;      /* altura fixa */
+  object-fit: cover;  /* corta para preencher sem distorcer */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(189,114,105,0.3);
+  transition: transform 0.3s ease;
+}
+
+    .card-servico img {
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(189,114,105,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card-servico img:hover {
+      transform: scale(1.05);
+    }
+    .card-servico h5 {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #5a2a27;
+    }
+    .card-servico p {
+      color: #7b5e57;
+    }
+
+    /* Sobre */
+    #sobre {
+      padding: 4rem 0;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    #sobre img {
+      max-width: 50%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(189,114,105,0.3);
+    }
+    #sobre .texto {
+      max-width: 50%;
+    }
+    #sobre h2 {
+      font-weight: 700;
+      color: #5a2a27;
+      margin-bottom: 1.5rem;
+    }
+    #sobre p {
+      color: #6b4c43;
+      line-height: 1.6;
+    }
+
+    /* Contato */
+    #contato {
+      background-color: #f1c0b9;
+      padding: 4rem 0;
+      color: #fff;
+      text-align: center;
+    }
+    #contato h2 {
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    #contato form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    #contato .form-control {
+      border-radius: 10px;
+      border: none;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    #contato .btn-primary {
+      width: 100%;
+      padding: 1rem;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #5a2a27;
+      color: #f1c0b9;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Responsividade */
+    @media(max-width: 768px) {
+      #sobre {
+        flex-direction: column;
+      }
+      #sobre img, #sobre .texto {
+        max-width: 100%;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="container navbar navbar-expand-md p-0">
+      <a class="navbar-brand" href="#">Beleza & Estilo</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Beleza que Realça Seu Estilo</h1>
+      <p>Transforme sua imagem com nossos serviços de cabelo, maquiagem e estética.</p>
+      <a href="#contato" class="btn btn-primary btn-lg">Agende seu horário</a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-servico text-center">
+            <img src="/corte.jpg" alt="Corte de cabelo" />
+            <h5>Corte de Cabelo</h5>
+            <p>Estilos modernos e personalizados para realçar sua beleza natural.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-servico text-center">
+            <img src="/make.jpg" alt="Maquiagem" />
+            <h5>Maquiagem Profissional</h5>
+            <p>Realce sua beleza com maquiagem para ocasiões especiais e diárias.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-servico text-center">
+            <img src="/estetica.jpg" alt="Estética Facial" />
+            <h5>Estética Facial</h5>
+            <p>Tratamentos que cuidam da pele e rejuvenescem sua aparência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <img src="/time.jpg" alt="Salão de Beleza" />
+    <div class="texto">
+      <h2>Sobre Nós</h2>
+      <p>O Salão Beleza & Estilo é referência em qualidade e atendimento personalizado. Nossa equipe altamente qualificada oferece serviços que valorizam sua beleza e bem-estar, com ambiente acolhedor e moderno.</p>
+      <p>Utilizamos produtos premium e técnicas atualizadas para garantir resultados que encantam nossos clientes.</p>
+      <p>Venha nos visitar e descubra uma nova experiência de cuidado e beleza.</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <form>
+      <input type="text" class="form-control mb-3" placeholder="Seu nome" required />
+      <input type="email" class="form-control mb-3" placeholder="Seu email" required />
+      <textarea class="form-control mb-3" rows="4" placeholder="Sua mensagem" required></textarea>
+      <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Beleza & Estilo - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
